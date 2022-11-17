@@ -1,4 +1,5 @@
-const Button = ({ name }) => {
-  return <button className="w-48 bg-black">{name}</button>;
+const Button = ({ name, handleClick }) => {
+  
+  return <button className="w-full h-9 bg-lightColor text-mainColor" onClick={handleClick}>{name}</button>;
 };
 export default Button;
