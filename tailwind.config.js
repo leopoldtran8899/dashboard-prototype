@@ -15,11 +15,13 @@ module.exports = {
         subtitle: ['Goldman'],
       },
       colors: {
-        mainColor: '#B9006D',
-        lightColor: '#E0D4E5',
-        lightAccent: '#7B6684',
-        darkColor: '#55414A',
-        darkAccent: '#740038'
+        mainColor: '#00C1B8',
+        lightColor: '#E3F0FF',
+        lightAccent: '#72FACA',
+        darkColor: '#2B4B7C',
+        darkAccent: '#009DAF',
+        highlight: '#d7a31a',
+        warning: '#a81642'
       }
     },
   },

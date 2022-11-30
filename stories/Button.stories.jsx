@@ -2,12 +2,26 @@ import React from 'react';
 
 import Button from '../components/Button';
 
-export default {
-  title: 'Example/Button',
+const ButtonStory = {
+  title: 'Button',
   component: Button,
-  argTypes: { handleClick: { action: console.log('click') } }
+  argTypes: {
+    size: {
+      options: ['sm', 'md', 'lg', 'full'],
+      control: { type: 'radio' },
+    },
+    round: {
+      options: [true, false],
+      control: { type: 'radio' },
+    },
+  },
 };
+export default ButtonStory
+// export const Primary = () => <Button name='Button 1' round={false} />;
 
-const handleClick = () => console.log('Click on Button')
+const Template = (args) => <Button {...args}/>;
 
-export const Primary = () => <Button name='Button 1' handleClick={handleClick}/>;
+// 👇 Each story then reuses that template
+export const Normal = Template.bind({});
+Normal.args = { name: 'Button', size: 'sm' };
+// export const Dark = Template.bind({});
