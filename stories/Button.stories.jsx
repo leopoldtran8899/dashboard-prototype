@@ -14,14 +14,20 @@ const ButtonStory = {
       options: [true, false],
       control: { type: 'radio' },
     },
+    onClick: { action: 'clicked' }
   },
 };
-export default ButtonStory
+export default ButtonStory;
 // export const Primary = () => <Button name='Button 1' round={false} />;
 
-const Template = (args) => <Button {...args}/>;
+const Template = (args) => (
+  <html className={args.dark || ''}>
+    <Button {...args} />
+  </html>
+);
 
 // 👇 Each story then reuses that template
 export const Normal = Template.bind({});
 Normal.args = { name: 'Button', size: 'sm' };
-// export const Dark = Template.bind({});
+export const Dark = Template.bind({});
+Dark.args = { dark: 'dark',name: 'Button', size: 'sm' };

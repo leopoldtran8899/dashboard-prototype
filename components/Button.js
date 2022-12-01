@@ -1,4 +1,4 @@
-const Button = ({ name, handleClick, round=false, size = ''}) => {
+const Button = ({ name, onClick, round=false, size = ''}) => {
   let style = '';
   switch (size) {
     case 'sm':
@@ -18,10 +18,13 @@ const Button = ({ name, handleClick, round=false, size = ''}) => {
     style = style + ' rounded-full';
   }
 
+  const handleClick = e => {
+    onClick(e.target.value)
+  }
   return (
     <button
-      className={`${style} px-3 py-1 border-2 border-lightAccent bg-darkColor text-lightAccent dark:bg-lightColor dark:text-darkAccent min-w-fit`}
-      onClick={handleClick}
+      className={`${style} px-3 py-1 border-2 border-lightAccent-500 bg-darkColor-500 text-lightAccent-500 dark:bg-lightColor-500 dark:text-darkAccent-500 dark:border-darkAccent-500 hover:bg-darkColor-700 dark:hover:bg-lightColor-300 min-w-fit`}
+      onClick={onClick}
     >
       {name}
     </button>
