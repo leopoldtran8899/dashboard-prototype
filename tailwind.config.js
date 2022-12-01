@@ -13,7 +13,7 @@ module.exports = {
         'bgLogin': "url('https://raw.githubusercontent.com/leopoldtran8899/dashboard-prototype/main/public/login-bg.svg')"
       },
       fontFamily: {
-        body: ['Poiret One'],
+        body: ['Dosis'],
         title: ['Oxanium'],
         subtitle: ['Goldman'],
       },
