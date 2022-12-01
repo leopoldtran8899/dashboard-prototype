@@ -1,9 +1,14 @@
-import '../styles/globals.css'
-import { AppProvider } from '../context/app-context'
+import '../styles/globals.css';
+import { AppProvider } from '../context/app-context';
+import { ThemeProvider } from 'next-themes';
 function MyApp({ Component, pageProps }) {
-  return (<AppProvider>
-    <Component {...pageProps} />
-  </AppProvider>)
+  return (
+    <ThemeProvider attribute='class'>
+      <AppProvider>
+        <Component {...pageProps} />
+      </AppProvider>
+    </ThemeProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
