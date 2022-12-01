@@ -10,7 +10,12 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+@layer base {
+  body {
+    @apply bg-lightColor-500 text-darkColor-500 dark:bg-darkColor-500 dark:text-lightColor-500;
+  }
 
+}
 a {
   color: inherit;
   text-decoration: none;

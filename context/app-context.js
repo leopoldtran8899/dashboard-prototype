@@ -14,7 +14,13 @@ const appActions = {
 function appReducer(state, action) {
   switch (action.type) {
     case appActions.SWITCH_DARK_MODE: {
-      return { ...state, darkMode: !state.darkMode };
+      const isDark = !state.darkMode
+      if(isDark) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+      return { ...state, darkMode: isDark };
     }
 
     default: {

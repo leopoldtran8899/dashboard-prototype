@@ -13,8 +13,8 @@ export default function Demo() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className='flex flex-col items-center p-10 text-yellow-300 width-full'>
-        <div>Current mode {darkMode}</div>
+      <main className='flex flex-col items-center p-10 width-full'>
+        <div>Current mode {darkMode ? 'Dark' : 'Light'}</div>
         <button onClick={toggleDarkMode}>Change mode</button>
       </main>
     </div>
