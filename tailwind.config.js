@@ -9,9 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // backgroundImage : {
-      //   'animate_bg': "url('./public/login-bg.svg')"
-      // },
+      backgroundImage: {
+        'bgLogin': "url('/login-bg.svg')"
+      },
       fontFamily: {
         body: ['Poiret One'],
         title: ['Oxanium'],
